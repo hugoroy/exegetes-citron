@@ -35,6 +35,22 @@ nav.projets {
     margin: 3em auto;
 }
 
-.métadonnées, .ressources, .actions {
-    padding: 1em;
+.app.titre {
+    padding: 1em 20px;
+}
+
+.métadonnées, .éditer, .ressources, .actions {
+    padding: 1em 20px;
+}
+
+@media (min-width: @screen-md) {
+    body {
+	margin-left: 350px;
+    }
+    nav.projets {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 333px;
+    }
 }
