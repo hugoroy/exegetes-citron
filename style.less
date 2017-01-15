@@ -3,6 +3,7 @@
 @import "bootstrap3/less/variables.less";
 
 @violet: #6f5499;
+@brand-primary:  lighten(@violet,5%);
 
 nav.projets {
     width: 100%;
@@ -24,6 +25,12 @@ nav.projets {
     .heading {
 	color: #ccc;
     }
+    .vers-index {
+	&:before {
+	    content: "◂ ";
+	    margin-left: -0.8em;
+	}
+    }
 } 
 
 .bouton {
@@ -32,7 +39,7 @@ nav.projets {
 }
 
 .bouton.presse {
-    margin: 3em auto;
+    margin: 0.5em auto;
 }
 
 .app.titre {
@@ -41,6 +48,23 @@ nav.projets {
 
 .métadonnées, .éditer, .ressources, .actions {
     padding: 1em 20px;
+}
+
+.ressources {
+    a {
+	&.pad, &.pdf, &.docx, &.html5, &.txt {
+	    display: inline-block;
+	    padding: 0.3em;
+	    background: lighten(@violet,20%);
+	    border-radius: 4px;
+	    margin: 0 0 0.3em 0.5em;
+	    color: #fff;
+	    font-weight: 600;
+	}
+    }
+}
+
+#index {
 }
 
 @media (min-width: @screen-md) {
@@ -54,3 +78,4 @@ nav.projets {
 	width: 333px;
     }
 }
+

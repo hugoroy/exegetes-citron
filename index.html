@@ -17,19 +17,50 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
   </head>
-  <body>
+  <body id="index">
     <h1>Presse à Citron</h1>
 
     <p class="bievenue">
-      Choisis un projet ou bien <a href="#">ajoute un nouveau projet</a> !
+      Choisis un projet ou bien <a href="#ajouter">ajoute un nouveau projet</a> !
     </p>
+
+    <div class="éditer" id="ajouter">
+	<form>
+	<div class="form-group">
+	    <label for="projetNom">Nom du projet:</label>
+	    <input type="url" class="form-control" id="projetPadPrincipal" placeholder="Projet de mémoire">
+	</div>
+	<div class="form-group">
+	    <label for="projetId">Identifiant:</label>
+	    <input type="url" class="form-control" id="projetPadGarde" placeholder="(automatiquement suggéré en fonction du nom)">
+	</div>
+	<div class="form-group">
+	    <label for="projetDossier">Dossier: <a href="ajout-dossier.html">(Nouveau dossier ?)</a></label>
+	    <select name="dossier" id="dossiers" multiple="" class="form-control input-lg select2 select2-offscreen" tabindex="-1">
+		<option value="abroretention">Abrogation de la rétention des données</option>
+		<option value="tes">Fichier TES</option>
+		<option value="orangefail">#OrangeFail</option>
+		<option value="prishield">Privacy Shield</option>
+	    </select>
+	</div>
+	<div class="actions"> 
+	    <button type="submit" class="bouton">Ajouter</button>
+	</div>
+	</form>
+    </div>
+
+    <nav class="dossiers">
+    <h2>Liste des dossiers</h2>
+      <a href="abroretention/" class="selectionné">Abrogation de la rétention des données</a>
+    </nav>
     
     <nav class="projets">
       <span class="heading">Projets</span>
-      <a href="#" class="ajouter">Nouveau projet</a>
+      <a href="#" class="ajouter">Nouveau</a>
       <a href="abro-tele2.html">MA Abrogation Tele2</a>
       <a href="#">MA REP TES</a>
     </nav>
+
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
