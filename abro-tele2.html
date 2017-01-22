@@ -39,6 +39,15 @@
 	    <label for="projetPadAutre1">Autre pad: <a href="#">Ajouter</a></label>
 	    <input type="url" class="form-control hidden" id="projetPadAutre1" name="projetPadAutre1" placeholder="https://pad.exegetes.eu.org/">
 	</div>
+	<div class="form-group hidden">
+	    <label for="projetDossier">Dossier: <a href="ajout-dossier.html">(Nouveau dossier ?)</a></label>
+	    <select name="dossier" id="dossiers" multiple="" class="form-control input-lg select2 select2-offscreen" tabindex="-1">
+		<option value="abroretention" selected="selected">Abrogation de la rétention des données</option>
+		<option value="tes">Fichier TES</option>
+		<option value="orangefail">#OrangeFail</option>
+		<option value="prishield">Privacy Shield</option>
+	    </select>
+	</div>
 	<div class="actions"> 
 	    <button type="submit" class="bouton presse">Presser</button>
 	</div>
