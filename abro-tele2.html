@@ -79,13 +79,15 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script>
 $(document).ready(function() {
-    bartender_get_compilation_status();
+  setTimeout(bartender_get_compilation_status, 1000);
 });
 function bartender_get_compilation_status () {
     jQuery.get('/bartender/status?dossier=abroretention&projetId=abro-tele2', function(data) {
         $("#statusmsg").html(data["text"]);
+        if(data.status === 'IN PROGRESS') {
+          setTimeout(bartender_get_compilation_status, 5000);
+	}		
     });
-    setInterval( function(){ bartender_get_compilation_status() }, 30000);
 };
 </script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
