@@ -1,9 +1,3 @@
-<?php
-
-
-function main () {
-?>
-
 <!DOCTYPE html>
 <html lang="fr-fr">
   <head>
@@ -25,15 +19,22 @@ function main () {
   </head>
   <body id="index">
 		
-		<?php content(); ?>
-		
-		 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="bootstrap3/js/bootstrap.min.js"></script>
-		
-	</body>
-</html>
+<!--		<nav class="dossiers">
+			<h2>Liste des dossiers</h2>
+			<a href="/intveld/">In 't Veld</a>
+			<a href="/abroretention/">Abrogation de la rétention des données</a>
+		</nav>-->
 
-<?php
-} // end function main
+		<nav class="projets">
+			<a href="index.php" class="heading">Projets</a>
+			<?php
+			foreach ($projects as $main_p) {
+				echo "
+					<a href='voir.php?id={$main_p['rowid']}'>{$main_p['name']}</a>
+				";
+			}
+			?>
+<!--			<a href="/replique-premierministre-csi.html">Réplique Premier Ministre CSI</a>
+			<a href="/abro-tele2.html">MA Abrogation Tele2</a>-->
+			<a href="editer.php"><i>Créer</i></a>
+		</nav>
