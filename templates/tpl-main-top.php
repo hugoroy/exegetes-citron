@@ -30,11 +30,20 @@
 			<?php
 			foreach ($projects as $main_p) {
 				echo "
-					<a href='voir.php?id={$main_p['rowid']}'>{$main_p['name']}</a>
+					<a href='voir.php?type=project&id={$main_p['rowid']}'>{$main_p['name']}</a>
 				";
 			}
 			?>
-<!--			<a href="/replique-premierministre-csi.html">Réplique Premier Ministre CSI</a>
-			<a href="/abro-tele2.html">MA Abrogation Tele2</a>-->
-			<a href="editer.php"><i>Créer</i></a>
+			<a href="editer.php?type=project"><i>Créer un projet</i></a>
+			
+			<br/>
+			<a href="index.php" class="heading">Dossiers</a>
+			<?php
+			foreach ($dossiers as $main_d) {
+				echo "
+					<a href='voir.php?type=dossier&id={$main_d['rowid']}'>{$main_d['name']}</a>
+				";
+			}
+			?>
+			<a href="editer.php?type=dossier"><i>Créer un dossier</i></a>
 		</nav>
