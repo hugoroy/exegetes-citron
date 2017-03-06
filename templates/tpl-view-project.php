@@ -8,7 +8,6 @@ include_once 'templates/tpl-main-top.php';
       <span class="heading">Dossier</span>
       <a href="<?php echo $o['dossier']; ?>" class="dossier" id="<?php echo $o['dossier']; ?>"><?php echo $o['dossier']; ?></a>
     </div>
-</div>
 
 
     <div class="éditer">
