@@ -10,14 +10,6 @@ include_once 'templates/tpl-main-top.php';
     </div>
 </div>
 
-<div class="métadonnées">
-	<span class="heading">Liens</span>
-	<a href="<?php echo $o['main_pad']; ?>" class="nuage">Pad principal</a>
-	<a href="<?php echo $o['cover_pad']; ?>" class="wiki">Page de garde</a>
-</div>
-
-
-
 
     <div class="éditer">
 	<form action="/bartender/shake" method="get">
