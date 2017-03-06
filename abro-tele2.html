@@ -26,7 +26,7 @@
     </div>
 
     <div class="éditer">
-	<form>
+	<form action="/bartender/shake" method="get">
 	<div class="form-group hidden">
 	    <label for="projetId">Identifiant:</label>
 	    <input type="text" class="form-control" id="projetId" name="projetId" value="abro-tele2" placeholder="">
@@ -64,8 +64,10 @@
       <a class="docx" href="http://citron.exegetes.eu.org/abroretention/abro-tele2.docx">Docx</a>
       <a class="html5" href="http://citron.exegetes.eu.org/abroretention/abro-tele2.html">HTML</a>
       <a class="txt" href="http://citron.exegetes.eu.org/abroretention/abro-tele2.txt">Texte</a>
+      Dernière compilation :&nbsp;<div id="statusmsg"></div>
     </div>
-    
+
+
     <nav class="projets dossiers">
       <span class="heading">Projets</span>
       <a href="/replique-premierministre-csi.html">Réplique Premier Ministre CSI</a>
@@ -75,6 +77,19 @@
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script>
+$(document).ready(function() {
+  setTimeout(bartender_get_compilation_status, 1000);
+});
+function bartender_get_compilation_status () {
+    jQuery.get('/bartender/status?dossier=abroretention&projetId=abro-tele2', function(data) {
+        $("#statusmsg").html(data["text"]);
+        if(data.status === 'IN PROGRESS') {
+          setTimeout(bartender_get_compilation_status, 5000);
+	}		
+    });
+};
+</script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="bootstrap3/js/bootstrap.min.js"></script>
   </body>
