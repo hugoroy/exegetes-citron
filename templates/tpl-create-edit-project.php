@@ -18,7 +18,7 @@ include_once 'templates/tpl-main-top.php';
 			<input type="text" class="form-control" name="name" value="<?php echo $o['name']; ?>" placeholder="Nom du projet">
 		</div>
 		<div class="form-group">
-			<label>Dossier :</label>
+			<label>Dossier : <a href="/editer.php?type=dossier">(ou bien: Nouveau dossier ?)</a>/label>
 			<select name="dossier_id" id="dossiers" multiple="" class="form-control input-lg select2 select2-offscreen" tabindex="-1">
 				<?php foreach ($dossiers as $d) { ?>
 					<option value="<?php echo $d['rowid']; ?>"
