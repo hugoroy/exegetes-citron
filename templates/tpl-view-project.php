@@ -53,8 +53,22 @@ include_once 'templates/tpl-main-top.php';
 	</form>
     </div>
 
+    <div class="ressources">
+    <h3>Télécharger</h3>
+      <a class="pdf" href="/<?php echo $o['dossier_id']; ?>/<?php echo $o['rowid']; ?>.pdf">PDF</a>
+      <a class="docx" href="<?php echo $o['dossier_id']; ?>/<?php echo $o['rowid']; ?>.docx">Docx</a>
+      <a class="html5" href="/<?php echo $o['dossier_id']; ?>/<?php echo $o['rowid']; ?>.html">HTML</a>
+      <a class="txt" href="/<?php echo $o['dossier_id']; ?>/<?php echo $o['rowid']; ?>.txt">Texte</a>
+      <br />Dernière compilation :&nbsp;<div id="statusmsg"></div>
+    </div>
 
-
+<script>
+$(document).ready(function() {
+    jQuery.get('/bartender/status?dossier=tes&projetId=tes-ma-rep', function(data) {
+        $("#statusmsg").html(data["text"]);
+    });
+});
+</script>
 
 <?php
 include_once 'templates/tpl-main-bottom.php';
