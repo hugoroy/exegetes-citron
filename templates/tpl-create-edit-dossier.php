@@ -2,6 +2,9 @@
 include_once 'templates/tpl-main-top.php';
 ?>
 
+<body id="create-edit-dossier-<?php echo $o['rowid']; ?>" class="page-create-edit-dossier">
+
+
 <h1><?php echo $o['rowid'] ? "Éditer « {$o['name']} »" : 'Créer un dossier'; ?></h1>
 
 <div class="éditer">

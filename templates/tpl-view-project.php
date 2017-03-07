@@ -2,6 +2,8 @@
 include_once 'templates/tpl-main-top.php';
 ?>
 
+<body id="view-project-<?php echo $o['rowid']; ?>" class="page-view-project">
+
     <h1 class="app titre"><?php echo $o['name']; ?></h1>
 
     <div class="métadonnées">

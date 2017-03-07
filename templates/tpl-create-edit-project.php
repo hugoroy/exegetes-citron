@@ -2,6 +2,8 @@
 include_once 'templates/tpl-main-top.php';
 ?>
 
+<body id="create-edit-project-<?php echo $o['rowid']; ?>" class="page-create-edit-project">
+
 <h1><?php echo $o['rowid'] ? "Éditer le projet « {$o['name']} »" : 'Créer un projet'; ?></h1>
 
 <div class="éditer">

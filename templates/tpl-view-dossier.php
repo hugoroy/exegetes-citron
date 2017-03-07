@@ -2,6 +2,8 @@
 include_once 'templates/tpl-main-top.php';
 ?>
 
+<body id="view-dossier-<?php echo $o['rowid']; ?>" class="page-view-dossier">
+
 <h1 class="app titre">Dossier « <?php echo $o['name']; ?> »</h1>
 
 <div class="métadonnées">

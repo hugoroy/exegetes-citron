@@ -2,6 +2,7 @@
 include_once 'templates/tpl-main-top.php';
 ?>
 
+<body id="index">
 
     <h1>Presse à Citron</h1>
 
