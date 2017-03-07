@@ -55,10 +55,10 @@ include_once 'templates/tpl-main-top.php';
 
     <div class="ressources">
     <h3>Télécharger</h3>
-      <a class="pdf" href="/<?php echo $o['dossier_id']; ?>/<?php echo $o['rowid']; ?>.pdf">PDF</a>
-      <a class="docx" href="<?php echo $o['dossier_id']; ?>/<?php echo $o['rowid']; ?>.docx">Docx</a>
-      <a class="html5" href="/<?php echo $o['dossier_id']; ?>/<?php echo $o['rowid']; ?>.html">HTML</a>
-      <a class="txt" href="/<?php echo $o['dossier_id']; ?>/<?php echo $o['rowid']; ?>.txt">Texte</a>
+      <a class="pdf" href="/beta/<?php echo $o['dossier_id']; ?>/<?php echo $o['rowid']; ?>.pdf">PDF</a>
+      <a class="docx" href="/beta/<?php echo $o['dossier_id']; ?>/<?php echo $o['rowid']; ?>.docx">Docx</a>
+      <a class="html5" href="/beta/<?php echo $o['dossier_id']; ?>/<?php echo $o['rowid']; ?>.html">HTML</a>
+      <a class="txt" href="/beta/<?php echo $o['dossier_id']; ?>/<?php echo $o['rowid']; ?>.txt">Texte</a>
       <br />Dernière compilation :&nbsp;<div id="statusmsg"></div>
     </div>
 
