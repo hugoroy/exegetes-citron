@@ -15,7 +15,7 @@ include_once 'templates/tpl-main-top.php';
 		
 		<div class="form-group">
 			<label>Nom du projet :</label>
-			<input type="text" class="form-control" name="name" value="<?php echo $o['name']; ?>" placeholder="Nom du projet">
+			<input type="text" class="form-control" name="name" value="<?php echo $o['name']; ?>">
 		</div>
 		<div class="form-group">
 			<label>Dossier : <a href="/editer.php?type=dossier">(ou bien: Nouveau dossier ?)</a></label>
@@ -34,11 +34,11 @@ include_once 'templates/tpl-main-top.php';
 		</div>
 		<div class="form-group">
 			<label>Pad principal :</label>
-			<input type="text" class="form-control" name="main_pad" value="<?php echo $o['main_pad']; ?>" placeholder="Pad principal">
+			<input type="text" class="form-control" name="main_pad" value="<?php echo $o['main_pad']; ?>" placeholder="https://pad.exegetes.eu.org/">
 		</div>
 		<div class="form-group">
 			<label>Page de garde :</label>
-			<input type="text" class="form-control" name="cover_pad" value="<?php echo $o['cover_pad']; ?>" placeholder="Page de garde">
+			<input type="text" class="form-control" name="cover_pad" value="<?php echo $o['cover_pad']; ?>" placeholder="https://pad.exegetes.eu.org/">
 		</div>
 		<div class="actions">
 			<button type="submit" class="bouton">

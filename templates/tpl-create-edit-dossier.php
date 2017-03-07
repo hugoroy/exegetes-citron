@@ -16,26 +16,15 @@ include_once 'templates/tpl-main-top.php';
 		
 		<div class="form-group">
 			<label>Nom du dossier :</label>
-			<input type="text" class="form-control" name="name" value="<?php echo $o['name']; ?>" placeholder="Dossier de mémoire">
+			<input type="text" class="form-control" name="name" value="<?php echo $o['name']; ?>">
 		</div>
-<!--		<div class="form-group">
-			<label>Dossier :</label>
-			<input type="text" class="form-control" name="dossier" value="<?php echo $o['dossier']; ?>" placeholder="Le dossier de rattachement">
-			<select name="dossier" id="dossiers" multiple="" class="form-control input-lg select2 select2-offscreen" tabindex="-1">
-				<option value="intveld">In 't Veld</option>
-				<option value="abroretention">Abrogation de la rétention des données</option>
-				<option value="tes">Fichier TES</option>
-				<option value="orangefail">#OrangeFail</option>
-				<option value="prishield">Privacy Shield</option>
-			</select>
-		</div>-->
 		<div class="form-group">
 			<label>Lien cloud :</label>
-			<input type="text" class="form-control" name="cloud_link" value="<?php echo $o['cloud_link']; ?>" placeholder="Lien vers le nuage">
+			<input type="text" class="form-control" name="cloud_link" value="<?php echo $o['cloud_link']; ?>" placeholder="https://nuage.exegetes.eu.org/index.php/apps/files?dir=/Commun/">
 		</div>
 		<div class="form-group">
 			<label>Lien wiki :</label>
-			<input type="text" class="form-control" name="wiki_link" value="<?php echo $o['wiki_link']; ?>" placeholder="Lien vers le wiki">
+			<input type="text" class="form-control" name="wiki_link" value="<?php echo $o['wiki_link']; ?>" placeholder="https://exegetes.eu.org/amateurs/doku.php?id=affaire:">
 		</div>
 		<div class="actions">
 			<button type="submit" class="bouton">
