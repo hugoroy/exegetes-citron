@@ -19,7 +19,7 @@
 				";
 			}
 			?>
-      <a href="index.html" class="vers-index">Revenir à l'index des dossiers</a>
+      <a href="/" class="vers-index">Revenir à l'index des dossiers</a>
     </nav>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
