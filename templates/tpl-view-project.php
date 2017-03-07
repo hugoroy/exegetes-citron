@@ -64,7 +64,7 @@ include_once 'templates/tpl-main-top.php';
 
 <script>
 $(document).ready(function() {
-    jQuery.get('/bartender/status?dossier=tes&projetId=tes-ma-rep', function(data) {
+    jQuery.get('/bartender/status?dossier=<?php echo $o['dossier_id']; ?>&projetId=<?php echo $o['rowid']; ?>', function(data) {
         $("#statusmsg").html(data["text"]);
     });
 });
