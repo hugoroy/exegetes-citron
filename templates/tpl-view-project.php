@@ -31,13 +31,19 @@ include_once 'templates/tpl-main-top.php';
 	<div class="form-group hidden">
 	    <label for="projetDossier">Dossier: <a href="ajout-dossier.html">(Nouveau dossier ?)</a></label>
 	    <select name="dossier" id="dossiers" multiple="" class="form-control input-lg select2 select2-offscreen" tabindex="-1">
-		<option value="intveld" selected="selected">In 't Veld</option>
-		<option value="abroretention">Abrogation de la rétention des données</option>
-		<option value="tes">Fichier TES</option>
-		<option value="orangefail">#OrangeFail</option>
-		<option value="prishield">Privacy Shield</option>
+		    		<?php foreach ($dossiers as $d) { ?>
+					<option value="<?php echo $d['rowid']; ?>"
+						<?php
+							if ($d['rowid'] === $o['dossier_id'])
+								echo " selected ";
+						?>
+					>
+						<?php echo $d['name']; ?>
+					</option>
+				<?php } ?>
 	    </select>
 	</div>
+
 	<div class="actions"> 
 	    <button type="submit" class="bouton presse">Presser</button>
 	    <a href="editer.php?type=project&id=<?php echo $o['rowid']; ?>" type="submit" class="bouton">
