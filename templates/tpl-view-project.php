@@ -8,7 +8,7 @@ include_once 'templates/tpl-main-top.php';
 
     <div class="métadonnées">
       <span class="heading">Dossier</span>
-      <a href="<?php echo $o['dossier']; ?>" class="dossier" id="<?php echo $o['dossier']; ?>"><?php echo $o['dossier']; ?></a>
+      <a href="/voir.php?type=dossier&id=<?php echo $o['dossier_id']; ?>" class="dossier" id="<?php echo $o['dossier']; ?>"><?php echo $o['dossier']; ?></a>
     </div>
 
 
