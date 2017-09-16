@@ -17,8 +17,9 @@ include_once 'templates/tpl-main-top.php';
 
 
     <nav class="projets">
-    <h2>Liste des projets de ce dossier FIXME</h2>
+    <h2>Liste des projets de ce dossier</h2>
 			<?php
+            for (o) {
 			foreach ($projects as $main_p) {
 				echo "
                 <div class='projet {$main_d['rowid']}'>
@@ -26,6 +27,7 @@ include_once 'templates/tpl-main-top.php';
                 </div>
 				";
 			}
+            }
 			?>
     </nav>
 
