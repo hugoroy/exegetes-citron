@@ -28,7 +28,7 @@ include_once 'templates/tpl-main-top.php';
 		</div>
 		<div class="form-group">
 			<label>Groupe Pads :</label>
-			<input type="text" class="form-control" name="pads_link" value="<?php echo $o['pads_link']; ?>" placeholder="https://pad.exegetes.eu.org/group.html/">
+			<input type="text" class="form-control" name="pads" value="<?php echo $o['pads']; ?>" placeholder="https://pad.exegetes.eu.org/group.html/">
 		</div>
 		<div class="actions">
 			<button type="submit" class="bouton">
