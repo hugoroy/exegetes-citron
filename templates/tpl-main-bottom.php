@@ -1,21 +1,10 @@
-
-    <nav class="dossiers hide">
-    <h2>Liste des dossiers</h2>
-			<?php
-			foreach ($dossiers as $main_d) {
-				echo "
-					<a href='voir.php?type=dossier&id={$main_d['rowid']}'>{$main_d['name']}</a>
-				";
-			}
-			?>
-    </nav>
     
-    <nav class="projets">
+    <nav class="projets sidebar">
       <span class="heading">Projets</span>
 			<?php
 			foreach ($projects as $main_p) {
 				echo "
-					<a href='voir.php?type=project&id={$main_p['rowid']}'>{$main_p['name']}</a>
+					<a class="projet" href='voir.php?type=project&id={$main_p['rowid']}'>{$main_p['name']}</a>
 				";
 			}
 			?>

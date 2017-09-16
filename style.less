@@ -13,7 +13,7 @@
     &.clos {.bg-warning;}	
 }
 
-nav.projets {
+nav.projets.sidebar {
     width: 100%;
     height: 100%;
     background: @violet;
@@ -30,6 +30,12 @@ nav.projets {
 	&.selectionné, &.selected {
 	    background: @violet + #111;
 	}
+    a.projet {
+    display: none;
+    }
+    a.projet:nth-last-child(1), a.projet:nth-last-child(2), a.projet:nth-last-child(3), a.projet:nth-last-child(4), a.projet:nth-last-child(5) {
+    display: block;
+    }
     }
     .heading {
 	color: #ccc;
