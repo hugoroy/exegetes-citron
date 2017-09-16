@@ -4,7 +4,7 @@
 			<?php
 			foreach ($projects as $main_p) {
 				echo "
-					<a class="projet" href='voir.php?type=project&id={$main_p['rowid']}'>{$main_p['name']}</a>
+					<a class='projet' href='voir.php?type=project&id={$main_p['rowid']}'>{$main_p['name']}</a>
 				";
 			}
 			?>
