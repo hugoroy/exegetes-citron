@@ -33,7 +33,7 @@ include_once 'templates/tpl-main-top.php';
 			<?php
 			foreach (projects as $main_p) {
 				echo "
-					<a href='voir.php?type=project&id={$main_p['rowid']}' class='name'>{$main_d['name']}</a>
+					<a href='voir.php?type=project&id={$main_p['rowid']}' class='name'>{$main_p['name']}</a>
 				";
 			}
 			?>
