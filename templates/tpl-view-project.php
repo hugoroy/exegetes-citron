@@ -57,7 +57,7 @@ include_once 'templates/tpl-main-top.php';
 	</div>
 
     <div class="ressources">
-    <h3>Télécharger</h3>
+    <span>Télécharger</span>
       <a class="pdf" href="/beta/<?php echo $o['dossier_id']; ?>/<?php echo $o['rowid']; ?>.pdf">PDF</a>
       <a class="docx" href="/beta/<?php echo $o['dossier_id']; ?>/<?php echo $o['rowid']; ?>.docx">Docx</a>
       <a class="html5" href="/beta/<?php echo $o['dossier_id']; ?>/<?php echo $o['rowid']; ?>.html">HTML</a>
