@@ -10,7 +10,7 @@ include_once 'templates/tpl-main-top.php';
     </h1>
 
     <div class="métadonnées">
-	    <a href="editer.php?type=project&id=<?php echo $o['rowid']; ?>" class="modifier">
+	    <a href="editer.php?type=project&id=<?php echo $o['rowid']; ?>" type=submit" class="bouton">
 		    Éditer
 	    </a>
     </div>
