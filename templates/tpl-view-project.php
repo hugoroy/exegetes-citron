@@ -55,8 +55,6 @@ include_once 'templates/tpl-main-top.php';
 	<div class="actions"> 
 	    <button type="submit" class="bouton presse">Presser</button>
 	</div>
-	</form>
-    </div>
 
     <div class="ressources">
     <h3>Télécharger</h3>
@@ -65,6 +63,9 @@ include_once 'templates/tpl-main-top.php';
       <a class="html5" href="/beta/<?php echo $o['dossier_id']; ?>/<?php echo $o['rowid']; ?>.html">HTML</a>
       <a class="txt" href="/beta/<?php echo $o['dossier_id']; ?>/<?php echo $o['rowid']; ?>.txt">Texte</a>
       <br />Dernière compilation :&nbsp;<div id="statusmsg"></div>
+    </div>
+
+	</form>
     </div>
 
 <script>
