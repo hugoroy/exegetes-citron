@@ -26,7 +26,7 @@ include_once 'templates/tpl-main-top.php';
 					<a href='voir.php?type=project&id={$main_p['rowid']}' class='name'>{$main_p['name']}</a>
                 </div>
 				";
-			}
+			};
             }
 			?>
     </nav>
