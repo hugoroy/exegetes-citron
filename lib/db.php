@@ -7,6 +7,14 @@ class DB extends SQLite3 {
 	public function __construct () {}
 	
 	
+	/*
+	 * If the db is saying "unable to open database":
+	 * Check the db.sqlite's permmisions:
+	 * - chmod 775 /path/to/webapp/db.sqlite
+	 * Check the db.sqlite's parent directory permissions
+	 * - chmod 775 /path/to/webapp/
+	 * - chown username:www-data /path/to/webapp
+	 */
 	private function ensure_connection () {
 		
 		if (!$this->open) {
@@ -17,6 +25,7 @@ class DB extends SQLite3 {
 			$this->open('db.sqlite');
 		}
 		
+		// Create tables if they don't exist
 		if (!@$this->query('SELECT * FROM dossiers LIMIT 1')) {
 			$res = $this->query('
 				CREATE TABLE dossiers (
@@ -50,6 +59,11 @@ class DB extends SQLite3 {
 			else
 				echo "<pre>error creating projects table: ".$this->lastErrorMsg()."</pre>";
 		}
+		
+		// Add columns that don't exist (retro-compatibility)
+		// TODO: have a version number (in db/table comment ?) so that we don't have to blindly query
+		@$this->query('ALTER TABLE dossiers ADD pads_link varchar(1024)');
+		
 		return true;
 	}
 	
@@ -94,6 +108,7 @@ class DB extends SQLite3 {
 					'dossier'=>'',
 					'main_pad'=>'',
 					'cover_pad'=>'',
+					'pads'=>'',
 					'last_edit_date'=>'',
 				];
 		}
@@ -173,7 +188,7 @@ class DB extends SQLite3 {
 	public function CreateOrEditProject ($params) {
 		$this->ensure_connection();
 		
-		$params['pads'] = json_encode($params['pads']);
+//		$params['pads'] = json_encode($params['pads']);
 		
 		// EDITION
 		if (isset($params['rowid']) && $params['rowid']) {
