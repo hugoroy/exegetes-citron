@@ -24,6 +24,7 @@ class DB extends SQLite3 {
 					slugname varchar(128),
 					cloud_link varchar(1024),
 					wiki_link varchar(1024),
+					pads_link varchar(1024),
 					last_edit_date datetime
 				)
 			');
@@ -80,6 +81,7 @@ class DB extends SQLite3 {
 					'slugname'=>'',
 					'cloud_link'=>'',
 					'wiki_link'=>'',
+					'pads_link'=>'',
 					'last_edit_date'=>'',
 				];
 			
@@ -120,6 +122,7 @@ class DB extends SQLite3 {
 					name = :name,
 					cloud_link = :cloud_link,
 					wiki_link = :wiki_link,
+					pads_link = :pads_link,
 					last_edit_date = datetime('now')
 				WHERE
 					rowid = :rowid
@@ -128,6 +131,7 @@ class DB extends SQLite3 {
 			$q->bindValue(':name', $params['name'], SQLITE3_TEXT);
 			$q->bindValue(':cloud_link', $params['cloud_link'], SQLITE3_TEXT);
 			$q->bindValue(':wiki_link', $params['wiki_link'], SQLITE3_TEXT);
+			$q->bindValue(':pads_link', $params['pads_link'], SQLITE3_TEXT);
 			$q->bindValue(':rowid', $params['rowid'], SQLITE3_INTEGER);
 			
 			$result = $q->execute();
@@ -145,15 +149,16 @@ class DB extends SQLite3 {
 			
 			$q = $this->prepare("
 				INSERT INTO dossiers
-					(name, slugname, cloud_link, wiki_link, last_edit_date)
+					(name, slugname, cloud_link, wiki_link, pads_link, last_edit_date)
 				VALUES
-					(:name, :slugname, :cloud_link, :wiki_link, datetime('now'))
+					(:name, :slugname, :cloud_link, :wiki_link, :pads_link, datetime('now'))
 			");
 			
 			$q->bindValue(':name', $params['name'], SQLITE3_TEXT);
 			$q->bindValue(':slugname', $slug, SQLITE3_TEXT);
 			$q->bindValue(':cloud_link', $params['cloud_link'], SQLITE3_TEXT);
 			$q->bindValue(':wiki_link', $params['wiki_link'], SQLITE3_TEXT);
+			$q->bindValue(':pads_link', $params['pads_link'], SQLITE3_TEXT);
 			
 			$result = $q->execute();
 			
