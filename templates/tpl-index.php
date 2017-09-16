@@ -34,7 +34,7 @@ include_once 'templates/tpl-main-top.php';
 			<?php
 			foreach ($projects as $main_p) {
 				echo "
-                <div class='projet {$main_d['rowid']}'>
+                <div class='projet {$main_p['rowid']}'>
                     <a href='/voir.php?type=dossier&id={$main_p['dossier_id']}' class='dossier'>{$main_p['dossier']}</a> / 
 					<a href='voir.php?type=project&id={$main_p['rowid']}' class='name'>{$main_p['name']}</a>
                 </div>

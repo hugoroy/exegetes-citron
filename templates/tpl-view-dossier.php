@@ -19,14 +19,12 @@ include_once 'templates/tpl-main-top.php';
     <nav class="projets">
     <h2>Liste des projets de ce dossier</h2>
 			<?php
-            for ($o) {
-			foreach ($projects as $main_p) {
+			foreach ($projects as $main_d) {
 				echo "
-                <div class='projet {$main_d['rowid']}'>
+                <div class='projet {$main_p['rowid']}'>
 					<a href='voir.php?type=project&id={$main_p['rowid']}' class='name'>{$main_p['name']}</a>
                 </div>
 				";
-			};
             }
 			?>
     </nav>
