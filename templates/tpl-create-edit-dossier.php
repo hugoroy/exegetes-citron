@@ -26,6 +26,10 @@ include_once 'templates/tpl-main-top.php';
 			<label>Lien wiki :</label>
 			<input type="text" class="form-control" name="wiki_link" value="<?php echo $o['wiki_link']; ?>" placeholder="https://exegetes.eu.org/amateurs/doku.php?id=affaire:">
 		</div>
+		<div class="form-group">
+			<label>Groupe Pads :</label>
+			<input type="text" class="form-control" name="pads_link" value="<?php echo $o['pads_link']; ?>" placeholder="https://pad.exegetes.eu.org/group.html/">
+		</div>
 		<div class="actions">
 			<button type="submit" class="bouton">
 				<?php echo $o['rowid'] ? 'Enregistrer': 'Créer'; ?>
