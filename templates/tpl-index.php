@@ -13,7 +13,7 @@ include_once 'templates/tpl-main-top.php';
     nouveau dossier</a>) !
     </p>
 
-    <nav class="dossiers">
+    <nav class="dossiers hide hidden">
     <h2>Liste des dossiers</h2>
 			<?php
 			foreach ($dossiers as $main_d) {
@@ -34,6 +34,7 @@ include_once 'templates/tpl-main-top.php';
 			foreach ($projects as $main_p) {
 				echo "
                 <div class='projet {$main_d['rowid']}'>
+                    <a href='/voir.php?type=dossier&id={$main_o['dossier_id']}' class='dossier'>{$main_o['dossier']}</a>
 					<a href='voir.php?type=project&id={$main_p['rowid']}' class='name'>{$main_p['name']}</a>
                 </div>
 				";
