@@ -7,14 +7,12 @@ include_once 'templates/tpl-main-top.php';
     <h1 class="app titre">
       <a href="/voir.php?type=dossier&id=<?php echo $o['dossier_id']; ?>" class="dossier" id="<?php echo $o['dossier']; ?>"><?php echo $o['dossier']; ?></a> / 
     <?php echo $o['name']; ?>
+    </h1>
+
+    <div class="métadonnées">
 	    <a href="editer.php?type=project&id=<?php echo $o['rowid']; ?>" class="modifier">
 		    Éditer
 	    </a>
-    </h1>
-
-    <div class="métadonnées hide">
-      <span class="heading">Dossier</span>
-      <a href="/voir.php?type=dossier&id=<?php echo $o['dossier_id']; ?>" class="dossier" id="<?php echo $o['dossier']; ?>"><?php echo $o['dossier']; ?></a>
     </div>
 
 
